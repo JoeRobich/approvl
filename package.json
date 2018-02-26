@@ -1,0 +1,33 @@
+{
+  "name": "approvl",
+  "version": "1.0.0",
+  "description": "Manages GitLab Merge Request Approvals",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "build": "npm run build-ts && npm run tslint",
+    "serve": "node dist/index.js",
+    "watch-node": "nodemon dist/index.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "serve-debug": "nodemon --inspect dist/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "lodash": "^4.17.5",
+    "node-gitlab-api": "^2.2.4",
+    "node-gitlab-webhook": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.2",
+    "@types/lodash": "^4.14.104",
+    "@types/node": "^9.4.6",
+    "nodemon": "^1.15.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
